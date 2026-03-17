@@ -6,7 +6,7 @@ Draw or upload organic chemistry mechanisms and get instant AI-powered feedback 
 
 - **Freehand Drawing Canvas** — Draw mechanisms with pen, eraser, multiple colors, undo/redo
 - **Image Upload** — Drag & drop or browse to upload photos of handwritten mechanisms
-- **AI Analysis** — Powered by Google Gemini 2.0 Flash (free tier) to identify reaction types, verify correctness, and pinpoint errors
+- **AI Analysis** — Powered by Google Gemini 2.5 Flash (free tier) to identify reaction types, verify correctness, and pinpoint errors
 - **Error Explanation & Teaching** — Learn why mistakes were made and the underlying concepts
 - **Correct Mechanism Generation** — Get step-by-step descriptions of the correct mechanism
 - **Electron Pushing Diagrams** — Analyze curved arrow notation and electron flow
@@ -40,7 +40,7 @@ Draw or upload organic chemistry mechanisms and get instant AI-powered feedback 
 ## Tech Stack
 
 - **Next.js 16** (App Router) — React framework
-- **Google Gemini 2.0 Flash** — Multimodal AI (free tier: 1,500 req/day)
+- **Google Gemini 2.5 Flash** — Multimodal AI (free tier: 1,500 req/day)
 - **Tailwind CSS + shadcn/ui** — Modern UI components
 - **react-sketch-canvas** — Freehand drawing
 - **localStorage** — Zero-cost chat persistence

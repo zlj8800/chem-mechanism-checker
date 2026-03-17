@@ -16,12 +16,12 @@ export function getGeminiModel() {
   log.debug("INIT", "GoogleGenerativeAI client created");
 
   const model = genAI.getGenerativeModel({
-    model: "gemini-2.0-flash",
+    model: "gemini-2.5-flash",
     systemInstruction: {
       role: "user",
       parts: [{ text: SYSTEM_PROMPT }],
     },
   });
-  log.info("INIT", `model ready: gemini-2.0-flash (system prompt: ${SYSTEM_PROMPT.length} chars)`);
+  log.info("INIT", `model ready: gemini-2.5-flash (system prompt: ${SYSTEM_PROMPT.length} chars)`);
   return model;
 }
