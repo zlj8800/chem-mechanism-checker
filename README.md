@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MechCheck - Organic Chemistry Mechanism Checker
 
-## Getting Started
+Draw or upload organic chemistry mechanisms and get instant AI-powered feedback on correctness, errors, and step-by-step solutions.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Freehand Drawing Canvas** — Draw mechanisms with pen, eraser, multiple colors, undo/redo
+- **Image Upload** — Drag & drop or browse to upload photos of handwritten mechanisms
+- **AI Analysis** — Powered by Google Gemini 2.0 Flash (free tier) to identify reaction types, verify correctness, and pinpoint errors
+- **Error Explanation & Teaching** — Learn why mistakes were made and the underlying concepts
+- **Correct Mechanism Generation** — Get step-by-step descriptions of the correct mechanism
+- **Electron Pushing Diagrams** — Analyze curved arrow notation and electron flow
+- **Structure Determination** — Help with spectral data interpretation and structure ID problems
+- **Chat History** — Conversations saved in browser localStorage with sidebar navigation
+- **Follow-up Questions** — Ask clarifying questions within the same conversation
+- **Dark/Light Mode** — Toggle between themes
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Get a free Gemini API key** from [Google AI Studio](https://aistudio.google.com/apikey) (no credit card required)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Clone and install:**
+   ```bash
+   cd chem-mechanism-checker
+   npm install
+   ```
 
-## Learn More
+3. **Set your API key** — edit `.env.local`:
+   ```
+   GEMINI_API_KEY=your_actual_api_key_here
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Run the app:**
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Open [http://localhost:3000](http://localhost:3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js 16** (App Router) — React framework
+- **Google Gemini 2.0 Flash** — Multimodal AI (free tier: 1,500 req/day)
+- **Tailwind CSS + shadcn/ui** — Modern UI components
+- **react-sketch-canvas** — Freehand drawing
+- **localStorage** — Zero-cost chat persistence
